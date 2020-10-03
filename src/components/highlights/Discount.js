@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade'
 import Slide from 'react-reveal/Slide'
 
+import ButtomCompent from '../utils/Buttons'
+
 export default class Discount extends Component {
     state = {
         discountStart: 0,
@@ -34,6 +36,12 @@ export default class Discount extends Component {
                    <div className="discount_description">
                         <h3>Purchased Before</h3>
                         <p>React Reveal is an animation framework for React. It's MIT licensed, has a tiny footprint and written specifically for React in ES6. It can be used to create various cool reveal on scroll animations in your application. If you liked this package, don't forget to star the Github repository</p>
+                        <ButtomCompent
+                            link="google.com"
+                            bck="#ffa800"
+                            color="fff"
+                            text="Purchase Ticket"
+                        />
                     </div>
                    </Slide>
                 </div>
