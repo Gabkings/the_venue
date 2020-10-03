@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Demo Link
+ To see the live project click on the link below
+ [Live Project](http://whimsical-thrill.surge.sh/)
+ 
+ ## Screenshots
+ 
+
 ## Available Scripts
 
 In the project directory, you can run:
