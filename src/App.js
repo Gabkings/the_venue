@@ -1,8 +1,8 @@
 import React,{ Component } from 'react';
 import Featured from './components/featured/index';
 import Header from './components/header_footer/header'
+import VenueNFO from './components/venueNFO/VenueNFO';
 import './resources/styles.css'
-
 
 class App extends Component {
   render(){
@@ -11,6 +11,7 @@ class App extends Component {
         <header className="App-header">
           <Header/>
           <Featured/>
+          <VenueNFO/>
         </header>
       </div>
     );
