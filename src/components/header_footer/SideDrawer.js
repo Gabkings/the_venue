@@ -1,40 +1,51 @@
-import React from 'react'
+import React from "react";
 
-import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+import Drawer from "@material-ui/core/Drawer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import { scroller } from "react-scroll";
 
 function SideDrawer(props) {
-    return (
-        <Drawer
-        anchor="right"
-        open={props.open}
-        onClose = {()=>props.onClose(false)}
-        >
-            <List component="nav">
-                <ListItem button onClick={()=>console.log("Featured")}>
-                    Events Starts In
-                </ListItem>
-                <ListItem button onClick={()=>console.log("Featured")}>
-                    Venue NFO
-                </ListItem>
-                <ListItem button onClick={()=>console.log("Featured")}>
-                    Highlights
-                </ListItem>
-                <ListItem button onClick={()=>console.log("Featured")}>
-                    Pricing
-                </ListItem>
-                <ListItem button onClick={()=>console.log("LOcation")}>
-                    Location
-                </ListItem>
-            </List>
-        </Drawer>
-    )
+
+  const scrollToElement = (element) => {
+    scroller.scrollTo(element, {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: -150,
+    });
+    props.onClose(false);
+  };
+
+  return (
+    <Drawer
+      anchor="right"
+      open={props.open}
+      onClose={() => props.onClose(false)}
+    >
+      <List component="nav">
+        <ListItem button onClick={() => scrollToElement("featured")}>
+          Event starts in
+        </ListItem>
+
+        <ListItem button onClick={() => scrollToElement("venuenfo")}>
+          Venue NFO
+        </ListItem>
+
+        <ListItem button onClick={() => scrollToElement("highlights")}>
+          Highlights
+        </ListItem>
+
+        <ListItem button onClick={() => scrollToElement("pricing")}>
+          Pricing
+        </ListItem>
+
+        <ListItem button onClick={() => scrollToElement("location")}>
+          Location
+        </ListItem>
+      </List>
+    </Drawer>
+  );
 }
 
-export default SideDrawer
+export default SideDrawer;
